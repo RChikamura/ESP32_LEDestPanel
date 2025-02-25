@@ -1,0 +1,40 @@
+ID,name,type,JP,EN,Scroll
+0,無表示,None,/img/Next80x16/NoneN.bmp,/img/Next80x16/NoneN.bmp,
+1,希望の丘,HLocal HRapid YLocal YRapid Liner,/img/Next80x16/Kibo_no_okaN_JP.bmp,/img/Next80x16/Kibo_no_okaN_EN.bmp,/img/Scroll/Kibo_no_okaC.bmp
+2,幸せ通り,HLocal YLocal,/img/Next80x16/ShiawasedoriN_JP.bmp,/img/Next80x16/ShiawasedoriN_EN.bmp,/img/Scroll/ShiawasedoriC.bmp
+3,友情橋,HLocal YLocal,/img/Next80x16/YujobashiN_JP.bmp,/img/Next80x16/YujobashiN_EN.bmp,/img/Scroll/YujobashiC.bmp
+4,笑顔の街,HLocal HRapid YLocal YRapid Liner,/img/Next80x16/Egao_no_machiN_JP.bmp,/img/Next80x16/Egao_no_machiN_EN.bmp,/img/Scroll/Egao_no_machiC.bmp
+5,虹色公園,HLocal YLocal,/img/Next80x16/NijiirokoenN_JP.bmp,/img/Next80x16/NijiirokoenN_EN.bmp,/img/Scroll/NijiirokoenC.bmp
+6,青空広場,HLocal YLocal,/img/Next80x16/AozorahirobaN_JP.bmp,/img/Next80x16/AozorahirobaN_EN.bmp,/img/Scroll/AozorahirobaC.bmp
+7,森の入口,HLocal HRapid YLocal YRapid,/img/Next80x16/Mori_no_iriguchiN_JP.bmp,/img/Next80x16/Mori_no_iriguchiN_EN.bmp,/img/Scroll/Mori_no_iriguchiC.bmp
+8,小鳥の森,HLocal YLocal,/img/Next80x16/Kotori_no_moriN_JP.bmp,/img/Next80x16/Kotori_no_moriN_EN.bmp,/img/Scroll/Kotori_no_moriC.bmp
+9,光の小道,HLocal YLocal,/img/Next80x16/Hikari_no_komichiN_JP.bmp,/img/Next80x16/Hikari_no_komichiN_EN.bmp,/img/Scroll/Hikari_no_komichiC.bmp
+10,夢見ヶ丘(夢の森線),HLocal HRapid YLocal YRapid Liner,/img/Next80x16/YumemigaokaN_JP.bmp,/img/Next80x16/YumemigaokaN_EN.bmp,/img/Scroll/YumemigaokaC.bmp
+11,魔法の森,HLocal HRapid YLocal YRapid,/img/Next80x16/Maho_no_moriN_JP.bmp,/img/Next80x16/Maho_no_moriN_EN.bmp,/img/Scroll/Maho_no_moriC.bmp
+12,幸運の道,HLocal YLocal,/img/Next80x16/Koun_no_michiN_JP.bmp,/img/Next80x16/Koun_no_michiN_EN.bmp,/img/Scroll/Koun_no_michiC.bmp
+13,太陽の町,HLocal HRapid YLocal YRapid,/img/Next80x16/Taiyo_no_machiN_JP.bmp,/img/Next80x16/Taiyo_no_machiN_EN.bmp,/img/Scroll/Taiyo_no_machiC.bmp
+14,星屑通り,HLocal YLocal,/img/Next80x16/HoshikuzudoriN_JP.bmp,/img/Next80x16/HoshikuzudoriN_EN.bmp,/img/Scroll/HoshikuzudoriC.bmp
+15,夕焼け川,HLocal YLocal,/img/Next80x16/YuyakegawaN_JP.bmp,/img/Next80x16/YuyakegawaN_EN.bmp,/img/Scroll/YuyakegawaC.bmp
+16,月光の広場,HLocal YLocal,/img/Next80x16/Gekko_no_hirobaN_JP.bmp,/img/Next80x16/Gekko_no_hirobaN_EN.bmp,/img/Scroll/Gekko_no_hirobaC.bmp
+17,七色の丘,HLocal YLocal,/img/Next80x16/Nanairo_no_okaN_JP.bmp,/img/Next80x16/Nanairo_no_okaN_EN.bmp,/img/Scroll/Nanairo_no_okaC.bmp
+18,愛の町,HLocal YLocal,/img/Next80x16/Ai_no_machiN_JP.bmp,/img/Next80x16/Ai_no_machiN_EN.bmp,/img/Scroll/Ai_no_machiC.bmp
+19,花の広場,HLocal HRapid YLocal YRapid,/img/Next80x16/Hana_no_hirobaN_JP.bmp,/img/Next80x16/Hana_no_hirobaN_EN.bmp,/img/Scroll/Hana_no_hirobaC.bmp
+20,星の広場,HLocal HRapid YLocal YRapid,/img/Next80x16/Hoshi_no_hirobaN_JP.bmp,/img/Next80x16/Hoshi_no_hirobaN_EN.bmp,/img/Scroll/Hoshi_no_hirobaC.bmp
+101,春野台,YLocal YRapid HLocal HRapid Limited_Express Liner,/img/Next80x16/HarunodaiN_JP.bmp,/img/Next80x16/HarunodaiN_EN.bmp,/img/Scroll/HarunodaiC.bmp
+102,霞ヶ丘,YLocal HLocal,/img/Next80x16/KasumigaokaN_JP.bmp,/img/Next80x16/KasumigaokaN_EN.bmp,/img/Scroll/KasumigaokaC.bmp
+103,森見,YLocal HLocal,/img/Next80x16/MorimiN_JP.bmp,/img/Next80x16/MorimiN_EN.bmp,/img/Scroll/MorimiC.bmp
+104,緑風橋,YLocal HLocal,/img/Next80x16/RyokufubashiN_JP.bmp,/img/Next80x16/RyokufubashiN_EN.bmp,/img/Scroll/RyokufubashiC.bmp
+105,八重桜,YLocal YRapid HLocal HRapid Limited_Express Liner,/img/Next80x16/YaezakuraN_JP.bmp,/img/Next80x16/YaezakuraN_EN.bmp,/img/Scroll/YaezakuraC.bmp
+106,梅林町,YLocal HLocal,/img/Next80x16/BairinchoN_JP.bmp,/img/Next80x16/BairinchoN_EN.bmp,/img/Scroll/BairinchoC.bmp
+107,光水温泉,YLocal YRapid HLocal HRapid Limited_Express,/img/Next80x16/Hikarimizu_onsenN_JP.bmp,/img/Next80x16/Hikarimizu_onsenN_EN.bmp,/img/Scroll/Hikarimizu_onsenC.bmp
+108,花霞神社前,YLocal YRapid HLocal HRapid,/img/Next80x16/Hanagasumi_jinja_maeN_JP.bmp,/img/Next80x16/Hanagasumi_jinja_maeN_EN.bmp,/img/Scroll/Hanagasumi_jinja_maeC.bmp
+109,小川町,YLocal YRapid HLocal HRapid,/img/Next80x16/OgawachoN_JP.bmp,/img/Next80x16/OgawachoN_EN.bmp,/img/Scroll/OgawachoC.bmp
+110,夢見ヶ丘(花霞線),YLocal YRapid HLocal HRapid Limited_Express Liner,/img/Next80x16/YumemigaokaN_JP.bmp,/img/Next80x16/YumemigaokaN_EN.bmp,/img/Scroll/YumemigaokaC.bmp
+111,竹の道,YLocal HLocal,/img/Next80x16/Take_no_michiN_JP.bmp,/img/Next80x16/Take_no_michiN_EN.bmp,/img/Scroll/Take_no_michiC.bmp
+112,星空高原,YLocal HLocal,/img/Next80x16/Hoshizora_kogenN_JP.bmp,/img/Next80x16/Hoshizora_kogenN_EN.bmp,/img/Scroll/Hoshizora_kogenC.bmp
+113,虹の橋,YLocal YRapid HLocal HRapid,/img/Next80x16/NijinohashiN_JP.bmp,/img/Next80x16/NijinohashiN_EN.bmp,/img/Scroll/NijinohashiC.bmp
+114,山吹原,YLocal YRapid HLocal HRapid,/img/Next80x16/YamabukiharaN_JP.bmp,/img/Next80x16/YamabukiharaN_EN.bmp,/img/Scroll/YamabukiharaC.bmp
+115,桜清水,YLocal HLocal,/img/Next80x16/Sakura_shimizuN_JP.bmp,/img/Next80x16/Sakura_shimizuN_EN.bmp,/img/Scroll/Sakura_shimizuC.bmp
+116,森の音,YLocal HLocal,/img/Next80x16/MorinoneN_JP.bmp,/img/Next80x16/MorinoneN_EN.bmp,/img/Scroll/MorinoneC.bmp
+117,鳥追峠,YLocal HLocal,/img/Next80x16/Torioi_togeN_JP.bmp,/img/Next80x16/Torioi_togeN_EN.bmp,/img/Scroll/Torioi_togeC.bmp
+118,湯ノ花温泉,YLocal YRapid HLocal HRapid Limited_Express,/img/Next80x16/Yunohana_onsenN_JP.bmp,/img/Next80x16/Yunohana_onsenN_EN.bmp,/img/Scroll/Yunohana_onsenC.bmp

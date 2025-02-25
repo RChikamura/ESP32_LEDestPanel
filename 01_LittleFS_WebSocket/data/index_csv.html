@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Control</title>
+    <style>
+        .rapid {
+            color: green;
+        }
+        .specialRapid {
+            color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>LED Control Panel</h1>
+    <div id="inputForm">
+        <div id="modeDropdownContainer">
+            <label for="modeDropdown">表示モード:</label>
+            <select id="modeDropdown">
+                <option>全画面表示</option>
+                <option>種別+行先</option>
+                <option selected>次駅あり</option>
+                <option>スクロール</option>
+            </select>
+            <br>
+        </div>
+        <div id="fullDropdownContainer">
+            <label for="fullDropdown">全画面:</label>
+            <select id="fullDropdown"></select>
+            <br>
+        </div>
+        <div id="typeDropdownContainer">
+            <label for="typeDropdown">種別:</label>
+            <select id="typeDropdown"></select>
+            <br>
+        </div>
+        <div id="destDropdownContainer">
+            <label for="destDropdown">行先:</label>
+            <select id="destDropdown"></select>
+            <br>
+        </div>
+        <div id="depDropdownContainer">
+            <label for="depDropdown">始発:</label>
+            <select id="depDropdown"></select>
+            <br>
+        </div>
+        <div id="nextDropdownContainer">
+            <label for="nextDropdown">次駅:</label>
+            <select id="nextDropdown"></select>
+            <br>
+            <!--label>
+                <input type="checkbox" id="filterCheckbox"> 通過駅を非表示にする
+            </label>
+            <br-->
+        </div>
+        <button onclick="sendLEDCommand()">表示更新</button>
+    </div>
+    <script>
+        const modeDropdown = document.getElementById("modeDropdown");
+        const fullDropdown = document.getElementById("fullDropdown");
+        const typeDropdown = document.getElementById("typeDropdown");
+        const destDropdown = document.getElementById("destDropdown");
+        const depDropdown = document.getElementById("depDropdown");
+        const nextDropdown = document.getElementById("nextDropdown");
+        const filterCheckbox = document.getElementById("filterCheckbox");
+
+        // `list_type.csv` から種別ごとの色を取得
+        let typeColorMap = {};
+        async function loadTypeStyles(csvPath) {
+            try {
+                const response = await fetch(csvPath);
+                if (!response.ok) throw new Error("CSVファイルの読み込みに失敗しました");
+                const csvText = await response.text();
+                const rows = csvText.trim().split('\n').map(row => row.split(','));
+                const headers = rows[0];
+                const data = rows.slice(1).map(row => {
+                    return headers.reduce((obj, header, index) => {
+                        obj[header] = row[index];
+                        return obj;
+                    }, {});
+                });
+
+                let styleContent = "";
+                data.forEach(item => {
+                    if (item.className && item.color) {
+                        typeColorMap[item.className] = item.color; // 色をマッピング
+                        styleContent += `.${item.className} { color: ${item.color}; }\n`;
+                    }
+                });
+
+                let styleTag = document.getElementById("dynamicStyles");
+                if (!styleTag) {
+                    styleTag = document.createElement("style");
+                    styleTag.id = "dynamicStyles";
+                    document.head.appendChild(styleTag);
+                }
+                styleTag.textContent = styleContent;
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // CSVを読み込み、ドロップダウンを更新する関数（駅名の色を適用）
+        async function loadCSV(filePath, dropdown, isColored = false, applyClass = false) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) throw new Error("CSVファイルの読み込みに失敗しました");
+                const csvText = await response.text();
+                const rows = csvText.trim().split('\n').map(row => row.split(','));
+                const headers = rows[0];
+                const data = rows.slice(1).map(row => {
+                    return headers.reduce((obj, header, index) => {
+                        obj[header] = row[index];
+                        return obj;
+                    }, {});
+                });
+
+                dropdown.innerHTML = ""; // 初期化
+
+                data.forEach(item => {
+                    const option = document.createElement("option");
+                    option.value = item.ID;
+                    option.textContent = item.name;
+
+                    // 駅名のクラスを適用（スペース区切りで複数OK）
+                    if (applyClass && item.type) {
+                        option.className = item.type;
+
+                        // 最後の種別のクラスの色を適用
+                        const classList = item.type.split(" ");
+                        const lastClass = classList[classList.length - 1]; // 最後のクラスを取得
+                        if (typeColorMap[lastClass]) {
+                            option.style.color = typeColorMap[lastClass];
+                        }
+                    }
+
+                    dropdown.appendChild(option);
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // 初期化（CSSの自動生成＋ドロップダウンの更新）
+        async function initializeDropdowns() {
+            await loadTypeStyles('/list/list_type.csv'); // CSSを生成
+            await loadCSV('/list/list_full.csv', fullDropdown, false);
+            await loadCSV('/list/list_type.csv', typeDropdown, false);
+            await loadCSV('/list/list_dest.csv', destDropdown, true, true);
+            await loadCSV('/list/list_dest.csv', depDropdown, true, true);
+            await loadCSV('/list/list_next.csv', nextDropdown, true, true);
+        }
+
+        // `/status` から現在の設定を取得してドロップダウンを更新
+        async function updateDropdowns() {
+            try {
+                const response = await fetch('/status'); // ESP32 の変数状態を取得
+                if (!response.ok) throw new Error("ステータスの取得に失敗しました");
+
+                const data = await response.json(); // JSON をパース
+
+                modeDropdown.selectedIndex = data.mode;
+                fullDropdown.value = data.full;
+                typeDropdown.value = data.type;
+                destDropdown.value = data.dest;
+                depDropdown.value = data.dep;
+                nextDropdown.value = data.next;
+
+                updateItems();  // モードに応じた UI 更新
+                updateNextDrop();  // 次駅フィルターの更新
+            } catch (error) {
+                console.error('エラー:', error);
+            }
+        }
+
+        // ESP32へデータを送信
+        function sendLEDCommand() {
+            const params = new URLSearchParams({
+                mode: modeDropdown.selectedIndex,
+                full: fullDropdown.value,
+                type: typeDropdown.value,
+                dest: destDropdown.value,
+                dep: depDropdown.value,
+                next: nextDropdown.value,
+            });
+
+            fetch(`/send?${params.toString()}`, { method: "GET" })
+                .then(response => response.text())
+                .then(data => console.log("送信成功:", data))
+                .catch(error => console.error('送信エラー:', error));
+        }
+
+        // モード変更時のUI更新(falseで表示)
+        function updateItems() {
+            const modes = [
+                { full: false, type: true, dest: true, dep: true, next: true },
+                { full: true, type: false, dest: false, dep: true, next: false },
+                { full: true, type: false, dest: false, dep: true, next: false },
+                { full: true, type: false, dest: false, dep: false, next: true }
+            ];
+
+            const selectedMode = modes[modeDropdown.selectedIndex];
+
+            document.getElementById("fullDropdownContainer").hidden = selectedMode.full;
+            document.getElementById("typeDropdownContainer").hidden = selectedMode.type;
+            document.getElementById("destDropdownContainer").hidden = selectedMode.dest;
+            document.getElementById("depDropdownContainer").hidden = selectedMode.dep;
+            document.getElementById("nextDropdownContainer").hidden = selectedMode.next;
+        }
+
+        /*// 次駅のフィルタ（通過駅を非表示）
+        function updateNextDrop() {
+            const filterEnabled = filterCheckbox.checked;
+
+            Array.from(nextDropdown.options).forEach(option => {
+                if (filterEnabled && !option.classList.contains("Rapid")) {
+                    option.classList.add("hidden");
+                } else {
+                    option.classList.remove("hidden");
+                }
+            });
+        }*/
+
+        // イベントリスナー登録
+        modeDropdown.addEventListener("change", updateItems);
+        //filterCheckbox.addEventListener("change", updateNextDrop);
+
+        // 初期化
+        initializeDropdowns().then(() => {
+            updateItems();
+            updateDropdowns();
+            //updateNextDrop();
+        });
+    </script>
+</body>
+</html>

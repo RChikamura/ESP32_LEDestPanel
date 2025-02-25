@@ -1,0 +1,14 @@
+ID,name,path
+0,無表示,/img/Full128x32/NoneF.bmp
+1,回送,/img/Full128x32/Not_in_ServiceF.bmp
+2,試運転,/img/Full128x32/Test_RunF.bmp
+3,臨時,/img/Full128x32/ExtraF.bmp
+4,団体,/img/Full128x32/PartyF.bmp
+5,夢の森線,/img/Full128x32/Yumenomori_LineF.bmp
+6,花霞線,/img/Full128x32/Hanagasumi_LineF.bmp
+7,夢の森線各停,/img/Full128x32/YLocalF.bmp
+8,夢の森線快速,/img/Full128x32/YRapidF.bmp
+9,花霞線各停,/img/Full128x32/HLocalF.bmp
+10,花霞線快速,/img/Full128x32/HRapidF.bmp
+11,特急,/img/Full128x32/Limited_ExpressF.bmp
+12,夢花ライナー,/img/Full128x32/Yumehana_LinerF.bmp

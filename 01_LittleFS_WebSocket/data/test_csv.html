@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSVデータ表示</title>
+</head>
+<body>
+    <h2>ESP32からのCSVデータ</h2>
+    <table border="1" id="csvTableF"></table>
+		<br>
+    <table border="1" id="csvTableT"></table>
+		<br>
+    <table border="1" id="csvTableD"></table>
+		<br>
+    <table border="1" id="csvTableN"></table>
+		<br>
+
+    <script>
+        async function loadCSV(id, csvPath) {
+            try {
+                const response = await fetch(csvPath);
+                if (!response.ok) throw new Error("CSVの取得に失敗しました");
+
+                const text = await response.text();
+                const rows = text.trim().split("\n").map(row => row.split(","));
+
+                let tableHTML = "<tr>";
+                rows.forEach(row => {
+                    tableHTML += "<tr>" + row.map(cell => `<td>${cell}</td>`).join("") + "</tr>";
+                });
+
+                document.getElementById(id).innerHTML = tableHTML;
+            } catch (error) {
+                console.error(error);
+                document.getElementById(id).innerHTML = "<tr><td>データの読み込みに失敗しました</td></tr>";
+            }
+        }
+
+				async function loadAllCSV() {
+					loadCSV("csvTableF", "/list/list_full.csv");
+					loadCSV("csvTableT", "/list/list_type.csv");
+					loadCSV("csvTableD", "/list/list_dest.csv");
+					loadCSV("csvTableN", "/list/list_next.csv");
+				}
+        window.onload = loadAllCSV; // ページ読み込み時にCSV取得
+    </script>
+</body>
+</html>

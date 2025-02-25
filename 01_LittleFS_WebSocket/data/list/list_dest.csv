@@ -1,0 +1,13 @@
+ID,name,type,large,JP,EN
+0,無表示,None,/img/DestL80x32/NoneL.bmp,/img/DestS80x16/NoneS.bmp,/img/DestS80x16/NoneS.bmp
+1,希望の丘,HLocal HRapid YLocal YRapid Liner,/img/DestL80x32/Kibo_no_okaL.bmp,/img/DestS80x16/Kibo_no_okaS_JP.bmp,/img/DestS80x16/Kibo_no_okaS_EN.bmp
+4,笑顔の街,HLocal HRapid YLocal YRapid Liner,/img/DestL80x32/Egao_no_machiL.bmp,/img/DestS80x16/Egao_no_machiS_JP.bmp,/img/DestS80x16/Egao_no_machiS_EN.bmp
+10,夢見ヶ丘(夢の森線),HLocal HRapid YLocal YRapid Liner,/img/DestL80x32/YumemigaokaL.bmp,/img/DestS80x16/YumemigaokaS_JP.bmp,/img/DestS80x16/YumemigaokaS_EN.bmp
+20,星の広場,HLocal HRapid YLocal YRapid,/img/DestL80x32/Hoshi_no_hirobaL.bmp,/img/DestS80x16/Hoshi_no_hirobaS_JP.bmp,/img/DestS80x16/Hoshi_no_hirobaS_EN.bmp
+101,春野台,YLocal YRapid HLocal HRapid Limited_Express Liner,/img/DestL80x32/HarunodaiL.bmp,/img/DestS80x16/HarunodaiS_JP.bmp,/img/DestS80x16/HarunodaiS_EN.bmp
+107,光水温泉,YLocal YRapid HLocal HRapid Limited_Express,/img/DestL80x32/Hikarimizu_onsenL.bmp,/img/DestS80x16/Hikarimizu_onsenS_JP.bmp,/img/DestS80x16/Hikarimizu_onsenS_EN.bmp
+110,夢見ヶ丘(花霞線),YLocal YRapid HLocal HRapid Limited_Express Liner,/img/DestL80x32/YumemigaokaL.bmp,/img/DestS80x16/YumemigaokaS_JP.bmp,/img/DestS80x16/YumemigaokaS_EN.bmp
+113,虹の橋,YLocal YRapid HLocal HRapid,/img/DestL80x32/NijinohashiL.bmp,/img/DestS80x16/NijinohashiS_JP.bmp,/img/DestS80x16/NijinohashiS_EN.bmp
+118,湯ノ花温泉,YLocal YRapid HLocal HRapid Limited_Express,/img/DestL80x32/Yunohana_onsenL.bmp,/img/DestS80x16/Yunohana_onsenS_JP.bmp,/img/DestS80x16/Yunohana_onsenS_EN.bmp
+901,夢の森線,None,/img/DestL80x32/Yumenomori_LineL.bmp,/img/DestS80x16/Yumenomori_LineS.bmp,/img/DestS80x16/Yumenomori_LineS.bmp
+902,花霞線,None,/img/DestL80x32/Hanagasumi_LineL.bmp,/img/DestS80x16/Hanagasumi_LineS.bmp,/img/DestS80x16/Hanagasumi_LineS.bmp

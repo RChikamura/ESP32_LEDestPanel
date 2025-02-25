@@ -1,0 +1,8 @@
+ID,name,large,JP,EN,color,className
+0,無表示,/img/Type48x32/NoneT.bmp,/img/Type48x32/NoneT.bmp,/img/Type48x32/NoneT.bmp,,
+1,夢の森線各停,/img/Type48x32/YLocalL.bmp,/img/Type48x32/YLocalJP.bmp,/img/Type48x32/YLocalEN.bmp,green,YLocal
+2,夢の森線快速,/img/Type48x32/YRapidL.bmp,/img/Type48x32/YRapidJP.bmp,/img/Type48x32/YRapidEN.bmp,orange,YRapid
+3,花霞線各停,/img/Type48x32/HLocalL.bmp,/img/Type48x32/HLocalJP.bmp,/img/Type48x32/HLocalEN.bmp,pink,HLocal
+4,花霞線快速,/img/Type48x32/HRapidL.bmp,/img/Type48x32/HRapidJP.bmp,/img/Type48x32/HRapidEN.bmp,blue,HRapid
+5,特急,/img/Type48x32/Limited_ExpressL.bmp,/img/Type48x32/Limited_ExpressJP.bmp,/img/Type48x32/Limited_ExpressEN.bmp,red,Limited_Express
+6,夢花ライナー,/img/Type48x32/Yumehana_LinerJP.bmp,/img/Type48x32/Yumehana_LinerJP.bmp,/img/Type48x32/Yumehana_LinerEN.bmp,navy,Liner
