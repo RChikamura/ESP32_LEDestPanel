@@ -19,10 +19,10 @@ Wi-Fi経由での制御が可能で、カスタマイズ性の高い表示シス
 
 | バージョン                 | 説明 | リンク |
 |---------------------------|----------------------------------|---------------------------|
-| **01_LittleFS_WebSocket** | LittleFS + WebSocket制御版 | [ReadMe](./01_LittleFS_WebSocket/README.md) |
+| **01_LittleFS_WebSocket** | LittleFS + WebSocket制御版 | [ReadMe](./01_LittleFS_WebSocket/Readme.md) |
 | *02_(名称未定)* | (開発予定) |                                   |
-| **aboutACR**                 | 本ソフトウェアのサンプル路線について | [ReadMe](./aboutACR/README.md) |
-| **tools**                 | 画像変換・開発支援ツール | [ReadMe](./tools/README.md) |
+| **aboutACR**                 | 本ソフトウェアのサンプル路線について | [ReadMe](./aboutACR/Readme.md) |
+| **tools**                 | 画像変換・開発支援ツール | [ReadMe](./tools/Readme.md) |
 
 ---
 
