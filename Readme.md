@@ -28,6 +28,6 @@ Wi-Fi経由での制御が可能で、カスタマイズ性の高い表示シス
 
 ## **プロジェクト情報**  
 
-- **ライセンス**: MIT License  
+- **ライセンス**: Custom License  
 - **開発者**: No Name(RChikamura)  
 - **今後の開発予定**: MicroSD対応、自由スクロールなど  
